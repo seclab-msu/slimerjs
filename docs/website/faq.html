@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>FaQ - SlimerJS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently Asked Questions about SlimerJS">
+    <meta name="author" content="Laurent Jouanneau">
+
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+  </head>
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          
+          <a class="brand" href="index.html"><span>Slimer</span>JS</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="https://docs.slimerjs.org">Documentation</a></li>
+                <li><a href="https://github.com/laurentj/slimerjs">Source Code</a></li>
+                <li class="active"><a href="faq.html">FAQ</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <header class="jumbotron subhead" id="overview">
+      <div class="container">
+        <div class="logo">
+        <img class="" src="assets/img/glouton-boyEntete100.png"/>
+        </div>
+        <h1>FAQ</h1>
+        <p class="lead">Or Frequently Asked Questions...</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row-fluid">
+        <!--div class="span3 bs-docs-sidebar">
+          <ul class="nav nav-list bs-docs-sidenav">
+            <li><a href="#"><i class="icon-chevron-right"></i> </a></li>
+          </ul>
+        </div-->
+        <div class="span9">  
+          <section id="contents">
+            <!--div class="page-header">
+              <h1>title</h1>
+            </div-->
+
+<p>General FAQ. For the technical FAQ, <a href="https://docs.slimerjs.org/current/faq.html">see the manual</a>.</p>
+
+<dl id="faq">
+    <dt id="why-not-headless">Is it really natively headless?</dt>
+    <dd>You see windows during the execution of your script? It's normal.
+        Until Firefox 56, Gecko, the rendering engine of Firefox, couldn't render web
+        content without a graphical window.<br />
+        With Firefox 56+, you can launch a headless <span class="slm">SlimerJS</span> by adding a
+        <code>--headless</code> flag on the command line. For older Firefox,
+        and only on Linux, you can launch <span class="slm">SlimerJS</span>
+        with xvfb. See <a href="https://docs.slimerjs.org/current/installation.html#having-a-headless-slimerjs">the
+            documentation about the headless mode</a>.
+    </dd>
+
+    <dt id="gecko">What is Gecko?</dt>
+    <dd>Gecko is the core engine of Firefox.</dd>
+
+    <dt id="firefox-compatibility">Which version of Firefox is SlimerJS compatible with?</dt>
+    <dd>It runs with Firefox 52 and higher versions.<br>Officially, SlimerJS
+        is only compatible with stable versions of Firefox.
+    </dd>
+
+    <dt id="firefox-unstable">Can SlimerJS be executed with unstable version of Firefox?</dt>
+    <dd>Yes, if you make some changes. This is explained <a href="https://docs.slimerjs.org/current/installation.html#using-unstable-version-or-very-old-versions-of-firefox-xulrunner">in the installation manual</a>.</dd>
+
+    <dt id="standalone-version">I don't find anymore the "Standalone" edition
+     like for SlimerJS 0.9. Where is it?</dt>
+    <dd>There are no more "standalone" edition, since Mozilla has ceased to build and maintain
+    XulRunner. There is only the "lightweight" edition.</dd>
+
+    <dt id="launch-casperjs">Can CasperJS be launched with <span class="slm">SlimerJS</span>?</dt>
+    <dd>Yes, since SlimerJS 0.8, and with CasperJS 1.1beta1 or higher.
+        Just launch CasperJS as usual by adding <code>--engine=slimerjs</code>
+        on the command line.
+    </dd>
+
+    <dt id="why-slimerjs-name">Why is it called "SlimerJs"?</dt>
+    <dd>Slimer is the name of a ghost in the movie "GhostBusters". As you may know, the Firefox
+        source code uses some references from this movie, and since PhantomJS,
+        CasperJs and other related tools, is a matter of... ghosts ;-)</dd>
+
+    <dt id="how-to-contribute">How can I contribute?</dt>
+    <dd>
+        You can contribute in many ways:
+        <ul>
+            <li>Report bugs or ideas of improvements into
+                <a href="https://github.com/laurentj/slimerjs/issues">"issues" on github</a></li>
+            <li>Improve the code by providing patches. <span class="slm">SlimerJS</span> is entirely in Javascript!!
+            <a href="https://github.com/laurentj/slimerjs/blob/master/CONTRIBUTING.md">See instructions
+            to contribute</a>.</li>
+            <li>Improve the <a href="https://github.com/laurentj/slimerjs/tree/master/docs">Documentation</a>.
+                 It is stored in the github repository.</li>
+            <li><a href="https://github.com/laurentj/slimerjs/tree/master/website">Improve the web site</a>.
+                 The web site is also stored in the github repository.</li>
+            <li>Other ideas? Discuss with us on the IRC channel or in the mailing list
+             (<a href="community.html">see the community page</a>).</li>
+        </ul>
+    </dd>
+
+    <dt id="nightlies">Is there a build of SlimerJS containing the latest improvements?</dt>
+    <dd>Yes, each time a bug fix or an improvement is made
+    <a href="https://github.com/laurentj/slimerjs">in the repository of SlimerJS</a>,
+    a build is made. This is we call "nightly build". Since these are development
+    versions don't use them in production.<br>
+    Download the archive
+    <a href="https://download.slimerjs.org/nightlies/latest-slimerjs-stable/">from the stable branch</a>
+    (which contains only latest bug fixes) or
+    <a href="https://download.slimerjs.org/nightlies/latest-slimerjs-master/">from the master branch</a>
+    (which contains latest improvements for the future major release).
+    You can view the documentation from the master branch <a href="https://docs.slimerjs.org/nightly/">online here</a>.
+    </dd>
+
+    <dt>Why are there no tests on the WebServer object in the source code?</dt>
+    <dd>This module is based on the
+        <a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/test/httpserver/">httpd component</a>
+        of Mozilla used for their own unit tests, and that is already
+        <a href="https://dxr.mozilla.org/mozilla-central/source/netwerk/test/httpserver/test/">heavily tested</a></dd>
+
+</dl>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="footer">
+      <div class="container">
+          <ul class="bs-docs-social-buttons">
+            <li>
+              <a href="https://github.com/laurentj/slimerjs/"><img class="imgbtn" src="assets/img/git2.png"> Source Code</a> <span class="separator">//</span>
+            </li>
+            <li>
+              <a href="https://github.com/laurentj/slimerjs/fork"><img class="imgbtn" src="assets/img/git1.png"> Fork</a> <span class="separator">//</span>
+            </li>
+            <li>
+              <a href="https://twitter.com/slimerjs"><img src="assets/img/tweet.png"> Tweet</a> <span class="separator">//</span>
+            </li>
+            <li>
+              <a href="https://groups.google.com/forum/#!forum/slimerjs"><img class="imgbtn" src="assets/img/tchat2.png"> Mail List</a> <span class="separator">//</span>
+            </li>
+            <li>
+              <a href="https://github.com/laurentj/slimerjs/issues"><img class="imgbtn" src="assets/img/bug_bleu.png"> Bug? Ideas!</a>
+            </li>
+          </ul>
+          <p>Copyright 2013-2018 Laurent Jouanneau / <a href="http://innophi.com">Innophi</a> - Design by <a href="http://www.3liz.com/">3Liz</a></p>
+      </div>
+    </footer>
+
+    <!--script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script-->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!--script src="assets/js/holder/holder.js"></script-->
+    <!--script src="assets/js/google-code-prettify/prettify.js"></script-->
+    <script src="assets/js/application.js"></script>
+
+  </body>
+</html>
